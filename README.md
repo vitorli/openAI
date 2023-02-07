@@ -1,1 +1,1 @@
-# openAI whith telegram
+# openAI with telegram
