@@ -2,3 +2,4 @@ pip==23.0
 pyTelegramBotAPI==4.10.0
 openai==0.26.4
 numpy==1.24.2
+python-decouple==3.7
