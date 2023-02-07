@@ -1,8 +1,11 @@
-FROM python:3.8-slim-buster
+FROM python:3.8-alpine
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+COPY requirements.txt .
 
-CMD [ "python3", "./AI.py"]
+RUN pip install -r requirements.txt
+
+COPY . .
+
+CMD [ "python", "AI.py" ]
