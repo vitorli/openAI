@@ -1,2 +1,3 @@
 FROM ubuntu:18.04
-RUN 
+RUN pip install -r requirements.txt docker
+RUN AI.py
