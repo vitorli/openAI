@@ -1,6 +1,6 @@
 ﻿import openai
 import telebot
-import traceback
+import traceback2 as traceback
 from configparser import ConfigParser
 urlsconf ='config/config.ini'
 config =ConfigParser() 
