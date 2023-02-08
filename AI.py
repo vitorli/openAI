@@ -4,8 +4,8 @@ from configparser import ConfigParser
 urlsconf ='config/config.ini'
 config =ConfigParser() 
 config.read(urlsconf) 
-KEY  = config['tg_bot']['openaiKEY']
-TOKEN = config['tg_bot']['BOT_TOKEN ']
+KEY = config['tg_bot']['openaiKEY']
+TOKEN = config['tg_bot']['BOT_TOKEN']
 
 # Replace YOUR_API_KEY with your OpenAI API key
 openai.api_key = KEY
