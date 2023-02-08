@@ -2,3 +2,4 @@ pip==23.0
 pyTelegramBotAPI==4.10.0
 openai==0.26.4
 configparser==5.3.0
+traceback2==1.4.0
