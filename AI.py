@@ -88,4 +88,5 @@ while True:
     try:
         bot.polling()
     except(BaseException):
+        print(BaseException)
         pass
