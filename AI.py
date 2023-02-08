@@ -1,12 +1,18 @@
 ﻿import openai
 import telebot
-#from decouple import config
-# Replace YOUR_API_KEY with your OpenAI API key
-# openai.api_key = openaiKEY
-# bot = telebot.TeleBot(TOKEN)
+from configparser import ConfigParser
+urlsconf ='config/config.ini'
+config =ConfigParser() 
+config.read(urlsconf) 
+KEY  = config['tg_bot']['openaiKEY']
+TOKEN = config['tg_bot']['BOT_TOKEN ']
 
-openai.api_key = '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'
-bot = telebot.TeleBot('5719702427:AAH82a3OnaEizRiphIG2w3HwjmXb-l16Kgg')
+# Replace YOUR_API_KEY with your OpenAI API key
+openai.api_key = KEY
+bot = telebot.TeleBot(TOKEN)
+
+# openai.api_key = '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'
+# bot = telebot.TeleBot('5719702427:AAH82a3OnaEizRiphIG2w3HwjmXb-l16Kgg')
 
 global model
 global max_tokens
