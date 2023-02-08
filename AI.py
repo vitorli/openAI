@@ -11,9 +11,6 @@ TOKEN = config['tg_bot']['BOT_TOKEN ']
 openai.api_key = KEY
 bot = telebot.TeleBot(TOKEN)
 
-# openai.api_key = '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'
-# bot = telebot.TeleBot('5719702427:AAH82a3OnaEizRiphIG2w3HwjmXb-l16Kgg')
-
 global model
 global max_tokens
 model = "text-davinci-003"
