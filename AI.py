@@ -1,4 +1,4 @@
-﻿import openai
+import openai
 import telebot
 import traceback2 as traceback
 from configparser import ConfigParser
@@ -13,9 +13,8 @@ openai.api_key = KEY
 bot = telebot.TeleBot(TOKEN)
 
 global model
-global max_tokens
 model = "text-davinci-003"
-max_tokens = 1024
+
 
 
 @bot.message_handler(commands=['curie'])
