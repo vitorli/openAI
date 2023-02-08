@@ -1,5 +1,6 @@
 ﻿import openai
 import telebot
+import traceback
 from configparser import ConfigParser
 urlsconf ='config/config.ini'
 config =ConfigParser() 
@@ -87,6 +88,6 @@ def handle(message):
 while True:
     try:
         bot.polling()
-    except(BaseException):
-        print(BaseException)
+    except Exception as e:
+        print('Ошибка:\n', traceback.format_exc())
         pass
