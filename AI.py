@@ -8,14 +8,11 @@ config.read(urlsconf)
 KEY = config['tg_bot']['openaiKEY']
 TOKEN = config['tg_bot']['BOT_TOKEN']
 
-# Replace YOUR_API_KEY with your OpenAI API key
 openai.api_key = KEY
 bot = telebot.TeleBot(TOKEN)
 
 global model
 model = "text-davinci-003"
-
-
 
 @bot.message_handler(commands=['curie'])
 def start_message_1(message):
@@ -58,7 +55,6 @@ def max_tokens(message):
     bot.send_message(chat_id=message.from_user.id, text="Введите количество символов")
     bot.register_next_step_handler(message, max_tokens_next)
 
-
 def max_tokens_next(message):
     global max_tokens
     max_tokens = message.text
@@ -67,8 +63,6 @@ def max_tokens_next(message):
         bot.register_next_step_handler(message, max_tokens_next)
     else:
         bot.send_message(chat_id=message.from_user.id, text=f"Количество символов изменено на {max_tokens}")
-
-
 
 @bot.message_handler(func=lambda _: True)
 def handle(message):
