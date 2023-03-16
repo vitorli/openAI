@@ -49,6 +49,12 @@ def start_message_6(message):
     global model
     model = "text-davinci-003"
     bot.send_message(chat_id=message.from_user.id, text=f"Выбрана модель {model}")
+    
+@bot.message_handler(commands=['turbo'])
+def start_message_5(message):
+    global model
+    model = "gpt-3.5-turbo"
+    bot.send_message(chat_id=message.from_user.id, text=f"Выбрана модель {model}")
 
 @bot.message_handler(commands=['max_tokens']) 
 def max_tokens(message):
